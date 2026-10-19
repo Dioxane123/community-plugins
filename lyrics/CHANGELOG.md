@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.6
+
+- Keep runtime cache in Noctalia's plugin data directory so plugin source
+  updates do not break lyric requests or artwork downloads.
+
 ## 1.5.5
 
 - Retry MPRIS discovery after a short startup failure instead of leaving the

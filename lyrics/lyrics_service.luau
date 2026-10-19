@@ -19,7 +19,7 @@ local coverInFlight = nil
 local coverFetchGeneration = 0
 local maxCoverFiles = 80
 local pluginDir = noctalia.pluginDir() or "/tmp"
-local cacheDir = pluginDir .. "/.cache"
+local cacheDir = assert(noctalia.pluginDataDir()) .. "/cache"
 noctalia.mkdirAll(cacheDir)
 local requestDir = cacheDir .. "/requests"
 noctalia.mkdirAll(requestDir)

@@ -1,4 +1,4 @@
-# Noctalia Lyrics 1.5.5
+# Noctalia Lyrics 1.5.6
 
 Synchronized lyrics for the Noctalia bar, with multiple MPRIS players,
 translation and romanization layers, configurable sources, karaoke highlighting,
@@ -119,6 +119,10 @@ Album artwork uses MPRIS first, then the matched lyric source when available.
 LRCLIB, Qishui, and Musixmatch matches use the public iTunes Search API as an
 artwork fallback. Cached covers retain their detected image format and the
 oldest files are removed after the cache reaches 80 covers.
+
+Runtime cache files are stored in `noctalia.pluginDataDir() .. "/cache"`, which
+honors `NOCTALIA_STATE_HOME` and survives plugin source updates. Existing
+source-local caches are not migrated; artwork is fetched again as needed.
 
 ## Credential warning
 
